@@ -71,3 +71,19 @@
 - `Minxin` (命名空间冲突、逻辑不清晰、不易复用)
 - `scoped slot`作用域插槽 (配置项多、代码分裂、性能差)
 - `vue2`对`TS`支持不充分
+
+### 新增组件属性setup及其用法
+- [`官方文档` :arrow_right:](https://v3.cn.vuejs.org/guide/composition-api-introduction.html#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%84%E5%90%88%E5%BC%8F-api "官方文档")
+- [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/tree/main/vue3-demo/src/views/Home.vue "官方文档")
+- `setup`选项中没有`this`，无法访问组件声明中的属性
+- `setup`接受两个参数`props`与`context`
+- 第一个参数`props`不能使用`ES6`解构
+  - [`官方说明` :arrow_right:](https://v3.cn.vuejs.org/guide/composition-api-setup.html#props "官方说明")
+- `Vue3`中也可以使用`Vue2`的百分之九十以上的语法
+
+### 踩坑
+- `TS`对于代码格式有很严格的要求
+  - 结尾不能有分号
+- `vue`版本和`vue-template-compiler`版本不同问题
+  - 可以按照报错提示来安装相对应的版本
+  - [`详细步骤` :arrow_right:](https://ldl1204.xyz/67.html "详细步骤")
