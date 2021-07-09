@@ -88,17 +88,17 @@
 ### 组合式API `watch`和`watchEffect`
 - 都可以监听响应式对象的变化，从而执行回调
 - watchEffect会默认执行一次，而watch不会，必须事件触发
-- watchEffect只接收函数作为回调参数，而watch可以监听多个响应式对象，[`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/tree/main/vue3-demo/src/views/LogicReuse.ts "样例")
+- watchEffect只接收函数作为回调参数，而watch可以监听多个响应式对象，[`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/blob/main/vue3-demo/src/views/LogicReuse.ts#L23 "样例")
 #### watch
 - [`官方文档` :arrow_right:](https://v3.cn.vuejs.org/guide/composition-api-introduction.html#watch-%E5%93%8D%E5%BA%94%E5%BC%8F%E6%9B%B4%E6%94%B9 "官方文档")
-- [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/tree/main/vue3-demo/src/views/LogicReuse.ts "样例")
+- [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/blob/main/vue3-demo/src/views/LogicReuse.ts#L18 "样例")
 #### watchEffect
 - [`官方文档` :arrow_right:](https://v3.cn.vuejs.org/guide/reactivity-computed-watchers.html#watcheffect "官方文档")
-- [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/tree/main/vue3-demo/src/views/LogicReuse.ts "样例")
+- [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/blob/main/vue3-demo/src/views/LogicReuse.ts#L28 "样例")
 - 回调函数内的响应式对象被修改时，自动调用回调函数
 #### computed
 - [`官方文档` :arrow_right:](https://v3.cn.vuejs.org/api/computed-watch-api.html#computed "官方文档")
-- [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/tree/main/vue3-demo/src/views/LogicReuse.ts "样例")
+- [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/blob/main/vue3-demo/src/views/LogicReuse.ts#L39 "样例")
 
 ### 踩坑
 - `TS`对于代码格式有很严格的要求
