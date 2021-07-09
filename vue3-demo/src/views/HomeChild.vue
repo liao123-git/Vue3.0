@@ -10,7 +10,8 @@ export default {
   name: 'HomeChild',
   props: ['propsName'],
   setup (props, { emit, attrs }) {
-    console.log(attrs)
+    console.log('setup -> context - > attrs ', attrs)
+    console.log('setup -> props ', props)
 
     const clickHandler = () => {
       emit('minus-event')
