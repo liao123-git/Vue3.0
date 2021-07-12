@@ -113,7 +113,32 @@
 - [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/blob/main/vue3-demo/src/views/ReactivityTest/ReaonlyTest.ts "样例")
 #### ref和reactive的区别
 - `ref`和`reactive`一个针对原始数据类型，而另一个用于对象，这两个API都是为了给JavaScript普通的数据类型赋予响应式特性(reactivity)。根据Vue3官方文档，这两者的主要区别在于每个人写JavaScript时的风格不同，有人喜欢用原始数据类型(primitives)，把变量单独拎出来写；而有人喜欢用对象(Object)，把变量当作对象里的属性，都写在一个对象里头
-#### 使用扩展运算符扩展reactive使其丢失响应式特性
+#### 解构reactive使其丢失响应式特性
+```ts
+const utils = () => {
+    // 这里虽然使用了reactive函数，但是无法使x, y在解构之后具有响应特性
+    const state = reactive({
+        x: 1,
+        y: 2
+    })
+    return state
+}
+
+export default defineComponent({
+  setup() {
+    const {x, y} = utils()
+
+    setTimeout(() => {
+      x = 99
+      y = 33
+    }, 2000)
+
+    return {
+      x, y
+    }
+  }
+})
+```
 - 为了解决上述问题，Vue3又提供了一个新的API：`toRefs`，它可以将一个响应型对象(reactive object) 转化为普通对象(plain object)，同时又把该对象中的每一个属性转化成对应的响应式属性(ref)。说白了就是放弃该对象(Object)本身的响应式特性(reactivity)，转而给对象里的属性赋予响应式特性(reactivity)
 - [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/blob/main/vue3-demo/src/views/ReactivityTest/ReactiveTest.ts "样例")
 
