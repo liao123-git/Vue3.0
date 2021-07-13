@@ -200,6 +200,15 @@ export default defineComponent({
 })
 ```
 
+### 生命周期钩子
+
+- [`官方文档` :arrow_right:](https://v3.cn.vuejs.org/api/composition-api.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90 "官方文档")
+- [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/blob/main/vue3-demo/src/views/LifeCycle.vue "样例")
+- [`生命周期演示图` :arrow_right:](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA "生命周期演示图")
+- `Vue3`中`destroy`相关进行了改名
+- `setup`方法优先于`beforeCreate`执行
+- `render`方法可以方便的用于调试
+
 ### 踩坑
 
 - `TS`对于代码格式有很严格的要求
