@@ -209,6 +209,36 @@ export default defineComponent({
 - `setup`方法优先于`beforeCreate`执行
 - `render`方法可以方便的用于调试
 
+### Suspense简介
+
+- [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/blob/main/vue3-suspense/src/App.vue "样例")
+
+### Teleport
+- `Teleport`用于控制在`DOM`中任一指定父节点下呈现`HTML`，而不必求助于全局状态或将其拆分为两个组件
+    - 控制部分`DOM`脱离跟节点
+    - 可以使用本地化逻辑控制组件
+    - 适用于`fixed`或者绝对定位的组件
+- `Teleport`的`to`属性可以指定的对象格式：
+    - id
+      ```html
+        <teleport to="#id"></teleport>
+      ```
+    - class
+      ```html
+        <teleport to=".className"></teleport>
+      ```
+    - 属性选择器
+      ```html
+        <teleport to="[data-meta]"></teleport>
+      ```
+    - 动态
+      ```html
+       <teleport :to="props"></teleport>
+      ```
+- `Teleport`是保持状态的，使用`disabled`属性关闭传送
+- `Teleport`可以传送多组`DOM`，按照先后顺序`append`
+- [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/blob/main/vue3-teleport/src/App.vue "样例")
+
 ### 踩坑
 
 - `TS`对于代码格式有很严格的要求
