@@ -239,6 +239,21 @@ export default defineComponent({
 - `Teleport`可以传送多组`DOM`，按照先后顺序`append`
 - [`样例` :arrow_right:](https://github.com/liao123-git/Vue3.0/blob/main/vue3-teleport/src/App.vue "样例")
 
+### 全局变量`globalProperties`
+- 在main.js中
+```js
+const app = createApp(App);
+app.globalProperties.foo = "foo";
+```
+- 页面上：
+    - setup 中使用 proxy （强烈推荐）
+```js
+setup() {
+    const { proxy, ctx } = getCurrentInstance();
+    
+    console.log(proxy.foo); // 'foo' 本地打包都可以拿到
+}
+```
 ### 踩坑
 
 - `TS`对于代码格式有很严格的要求
